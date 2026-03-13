@@ -3,14 +3,22 @@
 
 import datetime
 
+import datetime
+
 name = input("Enter your name: ")
-print(f"Hello {name}! Today is {datetime.datetime.now().strftime('%Y-%m-%d')}")
+print(f"Hello {name}, today's date is", datetime.datetime.now().strftime("%Y-%m-%d"))
 
-print("1) Show help")
-print("2) Exit")
-choice = input("Choose (1-2): ")
+while True:
+    print("\nIT Helper Menu:")
+    print("1. Show date")
+    print("2. Exit")
+    choice = input("Pick 1 or 2: ")
+    
+    if choice == "1":
+        print("Today's date:", datetime.datetime.now().strftime("%Y-%m-%d"))
+    elif choice == "2":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice - pick 1 or 2")
 
-if choice == "1":
-    print("Help: This is an IT helper tool!")
-else:
-    print("Goodbye!")
